@@ -10,8 +10,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
-    logger.info "Unsubscribed to RoomChannel"
+    logger.info 'Unsubscribed to RoomChannel'
 
     speak('message' => '* * * left the room * * *')
   end
